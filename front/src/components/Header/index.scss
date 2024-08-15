@@ -1,0 +1,47 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  input {
+   border: none;
+   border-radius: 10px;
+   box-shadow: 4px 6px black;
+   color: black;
+   padding: 4px;
+   background-color: beige;
+   max-width: 10rem;
+   text-align: center;
+   
+  }
+
+  &__name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+  }
+
+  &__name input {
+    font-size: 18px;
+    margin-top: 5%;
+    padding: 4px;
+    max-width: 12rem;
+  }
+
+  &__description  {
+    display: flex;
+  }
+
+  &__description ul {
+    list-style-type: none;
+    display: flex;
+    gap: 4rem;
+  }
+  &__description ul li {
+    display: flex;
+    flex-direction: column;
+  }
+}
