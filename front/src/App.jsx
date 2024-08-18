@@ -6,10 +6,10 @@ import VitalPoints from "./components/Vital/VitalPoints";
 function App() {
   return (
     <>
-      <section>
+      <section className="header">
         <Header />
       </section>
-      <section>
+      <section className="VitalStats">
         <Proficiency />
         <VitalPoints />
       </section>
