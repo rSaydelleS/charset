@@ -1,7 +1,8 @@
 import "./App.css";
 import Header from "./components/Header/header";
-import Proficiency from "./components/Status/Proficiency";
+import Proficiency from "./components/Stats/Proficiency";
 import VitalPoints from "./components/Vital/VitalPoints";
+import OverallStats from "./components/OverallStats/OverallStats";
 
 function App() {
   return (
@@ -12,6 +13,9 @@ function App() {
       <section className="VitalStats">
         <Proficiency />
         <VitalPoints />
+      </section>
+      <section>
+        <OverallStats />
       </section>
     </>
   );
