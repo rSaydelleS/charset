@@ -14,15 +14,17 @@ export default function Equipments() {
   return (
     <>
       <main className="inventory">
-        <section>
-          <h1>Equipamentos</h1>
+        <section className="inventory__armas">
           <div>
+            <h1>Equipamentos</h1>
             <form onSubmit={handleSubmit(adicionar)}>
               <input type="text" {...register("arma")} />
               <input type="text" {...register("acerto")} />
               <input type="text" {...register("dano")} />
               <button type="submit">+</button>
             </form>
+          </div>
+          <div className="inventory__backpack">
             <table>
               <thead>
                 <th>Arma</th>

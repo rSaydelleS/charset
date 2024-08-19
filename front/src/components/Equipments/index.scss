@@ -4,4 +4,30 @@
   justify-content: space-around;
   align-items: center;
   text-align: justify;
+
+  &__armas {
+    display: flex;
+    gap: 3rem;
+    flex-direction: column;
+  }
+
+  &__armas input {
+    border-bottom: 2px solid white;
+    padding: 2px 2px;
+    margin: 2px 2px;
+    border-radius: 10px;
+    text-align: center;
+    
+  }
+    &__armas button {
+      border: none;
+      border-radius: 50%;
+      padding: 8px;
+  
+    }
+
+    &__backpack table{
+      width: 100%;
+      font-size: 18px;
+    }
 }
