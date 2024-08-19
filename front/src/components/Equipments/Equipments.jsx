@@ -1,29 +1,44 @@
 import "./index.scss";
+import { useForm } from "react-hook-form";
 
 export default function Equipments() {
+  const { register, handleSubmit, reset } = useForm();
+
+  const adicionar = (data) => {
+    console.log(data);
+
+    reset();
+  };
+
   return (
     <>
       <main className="inventory">
         <section>
           <h1>Equipamentos</h1>
           <div>
+            <form onSubmit={handleSubmit(adicionar)}>
+              <input type="text" {...register("arma")} />
+              <input type="text" {...register("acerto")} />
+              <input type="text" {...register("dano")} />
+              <button type="submit">+</button>
+            </form>
             <table>
-              <tr>
+              <thead>
                 <th>Arma</th>
                 <th>Acerto</th>
                 <th>Dano</th>
-              </tr>
-              <tr>
+              </thead>
+              <tbody>
                 <td>
-                  <input type="text" />
+                  <input type="text" name="arma" />
                 </td>
                 <td>
-                  <input type="text" />
+                  <input type="text" name="acerto" />
                 </td>
                 <td>
-                  <input type="text" />
+                  <input type="text" name="dano" />
                 </td>
-              </tr>
+              </tbody>
             </table>
           </div>
         </section>
