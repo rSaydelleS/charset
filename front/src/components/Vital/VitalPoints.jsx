@@ -19,16 +19,18 @@ export default function VitalPoints() {
           </div>
         </section>
         <section className="life">
-          <div>
-            <label>Dados de vida totais</label>
+          <div className="life__dice">
+            <label>Dados de vida totais: </label>
             <p>0</p>
           </div>
-          <div>
+          <div className="life__current">
             <label>Vida atual</label>
             <input type="text" />
             <label>Vida temporária</label>
             <p>0</p>
           </div>
+        </section>
+        <section>
           <div>
             <h2>Testes de morte</h2>
             <div>
