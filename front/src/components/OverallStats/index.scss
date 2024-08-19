@@ -1,9 +1,40 @@
-.allstats {
-  width: 100%;
+.over {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 3rem;
-  margin: 2rem 0rem;
+  gap: 4rem;
+  margin: 3rem;
+  justify-content: space-around;
+  ali
+
+   &__allstats {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 3rem;
+      margin: 2rem 0rem;
+    }
+
+  &__allstats input {
+    font-size: 15px;
+    border-radius: 50%;
+    text-align: center;
+    width: 4rem;
+    height: 4rem;
+    border: none;
+  }
+  
+  &__proficiency ul {
+    width: 100%;
+    list-style-type: none;
+    text-align: justify;
+  }
+
+  &__proficiency ul li {
+    padding: 0.5rem;
+    border-bottom: 2px solid white;
+    border-radius: 10px;
+    font-weight: 600;
+  }
 }
