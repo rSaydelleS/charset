@@ -3,10 +3,8 @@ import { useForm } from "react-hook-form";
 
 export default function Equipments() {
   const { register, handleSubmit, reset } = useForm();
-
   const adicionar = (data) => {
     console.log(data);
-
     reset();
   };
 
@@ -28,17 +26,7 @@ export default function Equipments() {
                 <th>Acerto</th>
                 <th>Dano</th>
               </thead>
-              <tbody>
-                <td>
-                  <input type="text" name="arma" />
-                </td>
-                <td>
-                  <input type="text" name="acerto" />
-                </td>
-                <td>
-                  <input type="text" name="dano" />
-                </td>
-              </tbody>
+              <tbody></tbody>
             </table>
           </div>
         </section>
