@@ -1,10 +1,13 @@
+import { useState } from "react";
 import "./index.scss";
 import { useForm } from "react-hook-form";
 
 export default function Equipments() {
   const { register, handleSubmit, reset } = useForm();
+  const [inventario, setInventario] = useState([]);
   const adicionar = (data) => {
     console.log(data);
+    setInventario([data]);
     reset();
   };
 
@@ -26,7 +29,15 @@ export default function Equipments() {
                 <th>Acerto</th>
                 <th>Dano</th>
               </thead>
-              <tbody></tbody>
+              {inventario.map((item) => {
+                return (
+                  <tbody key={item.arma}>
+                    <td>{item.arma}</td>
+                    <td>{item.acerto}</td>
+                    <td>{item.dano}</td>
+                  </tbody>
+                );
+              })}
             </table>
           </div>
         </section>
