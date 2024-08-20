@@ -43,7 +43,7 @@ export default function Equipments() {
             </table>
           </div>
         </section>
-        <section>
+        <section className="equips">
           <h2>Inventário</h2>
           <textarea cols="60" rows="10"></textarea>
         </section>

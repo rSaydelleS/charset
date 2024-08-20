@@ -16,7 +16,7 @@ export default function OverallStats() {
             <p>Modificador:</p>
           </div>
           <div>
-            <h2>Coonstituiçao</h2>
+            <h2>Constituiçao</h2>
             <input type="text" />
             <p>Modificador:</p>
           </div>

@@ -4,16 +4,13 @@
   gap: 4rem;
   margin: 3rem;
   justify-content: space-around;
-  ali
+  text-align: center;
 
    &__allstats {
-      width: 100%;
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 3rem;
-      margin: 2rem 0rem;
     }
 
   &__allstats input {
@@ -22,6 +19,8 @@
     text-align: center;
     width: 4rem;
     height: 4rem;
+    background-color: white;
+    color: #242424;
     border: none;
   }
   
