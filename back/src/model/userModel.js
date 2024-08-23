@@ -5,11 +5,11 @@ const userSchema = new Schema(
   {
     name: {
       require: true,
-      type: string,
+      type: String,
     },
     email: {
       require: true,
-      type: string,
+      type: String,
     },
   },
   {
