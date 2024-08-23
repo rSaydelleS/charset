@@ -5,11 +5,7 @@ const controller = require("../controllers/controllers");
 
 conn();
 
-routes.get("/", (req, res) => {
-  res.status(200).json({
-    message: "ok",
-  });
-});
+routes.get("/", controller.getAll);
 
 routes.get("/:id", (req, res) => {
   const id = req.params.id;
@@ -27,11 +23,6 @@ routes.put("/update/:id", (req, res) => {
 
 routes.post("/create", controller.create);
 
-routes.delete("/delete/:id", (req, res) => {
-  const id = req.params.id;
-  res.status(200).json({
-    message: `Usuario de id ${id} deletado`,
-  });
-});
+routes.delete("/delete/:id", controller.deleteUser);
 
 module.exports = routes;
