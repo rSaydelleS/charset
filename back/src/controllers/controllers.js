@@ -53,6 +53,28 @@ exports.create = async (req, res) => {
   }
 };
 
+exports.updateLogin = async (req, res) => {
+  try {
+    const userID = req.params.id;
+    const name = req.body.name;
+    const email = req.body.email;
+
+    const updatedUser = await userModel.findByIdAndUpdate(userID, {
+      name: name,
+      email: email,
+    });
+    res.status(200).json({
+      message: "Usuarioa atualizado com sucesso",
+      data: updatedUser,
+    });
+  } catch (error) {
+    console.log(error);
+    res.status(400).json({
+      message: "Erro ao atualizar usuario",
+    });
+  }
+};
+
 exports.deleteUser = async (req, res) => {
   try {
     const userID = req.params.id;
