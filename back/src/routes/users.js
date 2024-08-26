@@ -13,6 +13,8 @@ routes.put("/update/:id", controller.updateLogin);
 
 routes.post("/create", controller.create);
 
+routes.post("/login", controller.login);
+
 routes.delete("/delete/:id", controller.deleteUser);
 
 module.exports = routes;

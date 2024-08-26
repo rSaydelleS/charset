@@ -53,6 +53,33 @@ exports.create = async (req, res) => {
   }
 };
 
+exports.login = async (req, res) => {
+  const userName = req.body.name;
+  const userEmail = req.body.email;
+  try {
+    const findUser = await userModel.findOne({
+      name: userName,
+      email: userEmail,
+    });
+    if (findUser == null) {
+      res.status(400).json({
+        message: "Usuario nao encontrado",
+        data: findUser,
+      });
+    } else {
+      res.status(200).json({
+        message: "Usuario encontrado com sucesso",
+        data: findUser,
+      });
+    }
+  } catch (error) {
+    console.error(error);
+    res.status(400).json({
+      message: "Usuario n'ao encontrado ou erro no servidor",
+    });
+  }
+};
+
 exports.updateLogin = async (req, res) => {
   try {
     const userID = req.params.id;
