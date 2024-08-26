@@ -75,7 +75,7 @@ exports.login = async (req, res) => {
   } catch (error) {
     console.error(error);
     res.status(400).json({
-      message: "Usuario n'ao encontrado ou erro no servidor",
+      message: "Usuario nao encontrado ou erro no servidor",
     });
   }
 };
