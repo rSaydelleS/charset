@@ -1,10 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   font-family: "MedievalSharp", cursive;
 
 
   color-scheme: light dark;
   color: #242424;
-  background-image: linear-gradient(to bottom, rgba(214, 214, 214, 0.836), rgb(138, 138, 137));
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;

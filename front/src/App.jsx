@@ -1,27 +1,13 @@
 import "./App.css";
-import Header from "./components/Header/header";
-import Proficiency from "./components/Stats/Proficiency";
-import VitalPoints from "./components/Vital/VitalPoints";
-import OverallStats from "./components/OverallStats/OverallStats";
-import Equipments from "./components/Equipments/Equipments";
-
+import React from "react";
+import CharHeader from "./components/charHeader/charHeader";
 function App() {
   return (
-    <>
-      <section className="header">
-        <Header />
+    <React.Fragment>
+      <section className="w-full h-full md:h-screen bg-white/10">
+        <CharHeader />
       </section>
-      <section className="VitalStats">
-        <Proficiency />
-        <VitalPoints />
-      </section>
-      <section>
-        <OverallStats />
-      </section>
-      <section>
-        <Equipments />
-      </section>
-    </>
+    </React.Fragment>
   );
 }
 

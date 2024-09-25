@@ -3,12 +3,3 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-.VitalStats {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  gap: 2rem;
-  margin-top: 6rem;
-
-}

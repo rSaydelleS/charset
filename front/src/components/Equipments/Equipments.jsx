@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "./index.scss";
 import { useForm } from "react-hook-form";
 
 export default function Equipments() {
@@ -13,8 +12,8 @@ export default function Equipments() {
 
   return (
     <>
-      <main className="inventory">
-        <section className="inventory__armas">
+      <main>
+        <section>
           <div>
             <h1>Equipamentos</h1>
             <form onSubmit={handleSubmit(adicionar)}>
@@ -24,7 +23,7 @@ export default function Equipments() {
               <button type="submit">+</button>
             </form>
           </div>
-          <div className="inventory__backpack">
+          <div>
             <table>
               <thead>
                 <th>Arma</th>
@@ -43,7 +42,7 @@ export default function Equipments() {
             </table>
           </div>
         </section>
-        <section className="equips">
+        <section>
           <h2>Inventário</h2>
           <textarea cols="60" rows="10"></textarea>
         </section>
