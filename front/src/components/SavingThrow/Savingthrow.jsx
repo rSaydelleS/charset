@@ -3,7 +3,7 @@ import React from "react";
 export default function SavingTheow() {
   return (
     <React.Fragment>
-      <section className="grid grid-cols-2 grid-rows-2 justify-center items-center content-center text-white/80">
+      <section className="flex flex-row justify-center items-center content-center text-white/80">
         <div className="flex flex-col p-5 gap-2 justify-center items-center leading-normal tracking-wide">
           <div className="border-white/15 border-solid border-b-2 p-2">
             <label className="text-xl mr-2" htmlFor="forca">
