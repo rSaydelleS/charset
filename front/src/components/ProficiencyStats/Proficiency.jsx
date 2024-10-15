@@ -1,9 +1,11 @@
 export default function Proficiency() {
   return (
     <>
-      <section className="text-white/80">
+      <section className="text-white/80 font-semibold text-lg leading-relaxed tracking-wide">
         <div>
-          <h1>Proficiencias</h1>
+          <h1 className="border-b-2 border-b-sky-600 rounded-lg text-center text-xl font-bold leading-normal mb-4">
+            Proficiencias
+          </h1>
           <div>
             <ul className=" flex flex-col gap-2">
               <li>
