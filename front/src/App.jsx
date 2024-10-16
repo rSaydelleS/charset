@@ -4,6 +4,7 @@ import CharHeader from "./components/charHeader/charHeader";
 import SavingThrow from "./components/SavingThrow/Savingthrow";
 import Proficiency from "./components/ProficiencyStats/Proficiency";
 import Vital from "./components/Vital/VitalPoints";
+import CharSenses from "./components/Senses/Senses";
 function App() {
   return (
     <React.Fragment>
@@ -15,6 +16,9 @@ function App() {
           <SavingThrow />
           <Vital />
           <Proficiency />
+        </div>
+        <div className="w-full flex flex-row justify-evenly items-start p-10 gap-10">
+          <CharSenses />
         </div>
       </section>
     </React.Fragment>
