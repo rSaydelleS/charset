@@ -13,12 +13,12 @@ function App() {
         <header>
           <CharHeader />
         </header>
-        <div className="w-full flex flex-row justify-evenly items-start p-10 gap-10">
+        <div className="w-full flex flex-col md:flex-row justify-evenly items-start p-10 gap-10">
           <SavingThrow />
           <Vital />
           <Proficiency />
         </div>
-        <div className="w-full flex flex-row justify-evenly items-start p-10 gap-10">
+        <div className="w-full grid grid-cols-1 grid-rows-2 md:grid-cols-2 md:grid-rows-1 justify-center items-start p-10">
           <CharSenses />
           <CharEquipaments />
         </div>
