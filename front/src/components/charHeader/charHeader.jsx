@@ -1,7 +1,10 @@
+import React from "react";
+import { SaveButton } from "../Button/SaveButton";
+
 export default function charHeader() {
   return (
-    <>
-      <main className="flex flex-col justify-center items-center text-center leading-relaxed p-5 text-white/80">
+    <React.Fragment>
+      <main className="flex flex-row justify-center items-center text-center leading-relaxed p-5 gap-10 text-white/80">
         <section className="flex flex-col md:flex-row gap-5 mb-12">
           <div className="flex flex-col">
             <label
@@ -60,7 +63,10 @@ export default function charHeader() {
             />
           </div>
         </section>
+        <section>
+          <SaveButton />
+        </section>
       </main>
-    </>
+    </React.Fragment>
   );
 }
