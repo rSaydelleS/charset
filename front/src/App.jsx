@@ -1,6 +1,7 @@
 import "./App.css";
 import React from "react";
 import CharHeader from "./components/charHeader/charHeader";
+import Stats from "./components/Stats/Stats";
 import SavingThrow from "./components/SavingThrow/Savingthrow";
 import Proficiency from "./components/ProficiencyStats/Proficiency";
 import Vital from "./components/Vital/VitalPoints";
@@ -12,6 +13,7 @@ function App() {
       <section className="w-full h-full bg-white/10 flex flex-col items-center ">
         <header>
           <CharHeader />
+          <Stats />
         </header>
         <div className="w-full flex flex-col md:flex-row justify-evenly items-start p-10 gap-10">
           <SavingThrow />
