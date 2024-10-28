@@ -10,7 +10,7 @@ export default function Proficiency() {
             <ul className=" flex flex-col gap-2">
               <li>
                 <input type="checkbox" disabled />
-                <label>Acrobacia</label>
+                <label>Acrobacia:</label>
               </li>
               <li>
                 <input type="checkbox" disabled />
