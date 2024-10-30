@@ -1,9 +1,9 @@
 import React from "react";
 import { SaveButton } from "../Button/SaveButton";
-import { SendForm } from "../Hooks/SendForm";
+import { UseSendForm } from "../Hooks/useSendForm";
 
 export default function charHeader() {
-  const { register, handleSubmit, SendSubmit } = SendForm();
+  const { register, handleSubmit, SendSubmit } = UseSendForm();
 
   return (
     <React.Fragment>
