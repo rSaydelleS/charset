@@ -1,8 +1,12 @@
+import conn from "../connection/dbConnection.js";
+import Controller from "../controllers/charControllers.js";
+
 const charRouter = (fastify, options, done) => {
-  fastify.get("/char/:id", (req, reply) => {
-    const { id } = req.params;
-    reply.send(`getting char of id: ${id}`);
-  });
+  conn();
+  fastify.get("/char/:id", Controller.getById);
+  fastify.post("/char", Controller.createChar);
+  fastify.put("/char/:id", Controller.updateChar);
+  fastify.delete("/char/:id", Controller.deleteChar);
 
   done();
 };
