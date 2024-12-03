@@ -10,6 +10,25 @@ const createUser = async (req, reply) => {
   }
 };
 
+const updateUser = async (req, reply) => {
+  try {
+    const { id } = req.params;
+    const { nome, email, senha } = req.body;
+    const newUser = await UserModel.findByIdAndUpdate(
+      { _id: id },
+      {
+        nome: nome,
+        email: email,
+        senha: senha,
+      }
+    );
+    return reply({ data: newUser });
+  } catch (error) {
+    console.error(error);
+  }
+};
+
 export default {
   createUser,
+  updateUser,
 };
