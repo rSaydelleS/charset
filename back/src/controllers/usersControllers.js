@@ -28,7 +28,18 @@ const updateUser = async (req, reply) => {
   }
 };
 
+const deleteUser = async (req, reply) => {
+  try {
+    const { id } = req.params;
+    const user = await UserModel.findByIdAndDelete({ _id: id });
+    return reply({ data: `usuario de id:${id} deletado` });
+  } catch (error) {
+    console.error(error);
+  }
+};
+
 export default {
   createUser,
   updateUser,
+  deleteUser,
 };
