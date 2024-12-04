@@ -3,10 +3,10 @@ import Controller from "../controllers/charControllers.js";
 
 const charRouter = (fastify, options, done) => {
   conn();
-  fastify.get("/char/:id", Controller.getById);
-  fastify.post("/char", Controller.createChar);
-  fastify.put("/char/:id", Controller.updateChar);
-  fastify.delete("/char/:id", Controller.deleteChar);
+  fastify.get("/:id", Controller.getById);
+  fastify.post("/", Controller.createChar);
+  fastify.put("/:id", Controller.updateChar);
+  fastify.delete("/:id", Controller.deleteChar);
 
   done();
 };

@@ -1,4 +1,4 @@
-import UserModel from "../models/UserModel";
+import UserModel from "../models/UserModel.js";
 
 const createUser = async (req, reply) => {
   try {
@@ -22,7 +22,7 @@ const updateUser = async (req, reply) => {
         senha: senha,
       }
     );
-    return reply({ data: newUser });
+    return reply.send({ data: newUser });
   } catch (error) {
     console.error(error);
   }
@@ -32,7 +32,7 @@ const deleteUser = async (req, reply) => {
   try {
     const { id } = req.params;
     const user = await UserModel.findByIdAndDelete({ _id: id });
-    return reply({ data: `usuario de id:${id} deletado` });
+    return reply.send({ data: `usuario de id:${id} deletado` });
   } catch (error) {
     console.error(error);
   }

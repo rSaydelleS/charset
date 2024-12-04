@@ -24,25 +24,23 @@ const updateChar = async (req, reply) => {
   try {
     const { id } = req.params;
     const { nome, classe, nivel, especie } = req.body;
-    const char = await CharModel.findByIdAndUpdate(
-      { _id: id },
-      nome,
-      classe,
-      nivel,
-      especie
-    );
+    const char = await CharModel.findByIdAndUpdate(id, {
+      nome: nome,
+      classe: classe,
+      nivel: nivel,
+      especie: especie,
+    });
     reply.send({ data: `updating char of id: ${id}` });
   } catch (error) {
     console.error(error);
   }
 };
 
-const deleteChar = (req, reply) => {
+const deleteChar = async (req, reply) => {
   try {
     const { id } = req.params;
-    const char = CharModel.findByIdAndDelete({ _id: id });
-
-    reply.send({ data: `deleting char of id: ${id}` });
+    const char = await CharModel.findByIdAndDelete(id);
+    return reply.send({ data: `deleting char of id: ${id}` });
   } catch (error) {
     console.error(error);
   }
