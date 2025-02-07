@@ -3,6 +3,7 @@ import usersControllers from "../controllers/usersControllers.js";
 
 const userRoutes = (fastify, options, done) => {
   conn();
+  fastify.get("/all", usersControllers.getUser);
   fastify.post("/", usersControllers.createUser);
   fastify.put("/:id", usersControllers.updateUser);
   fastify.delete("/:id", usersControllers.deleteUser);

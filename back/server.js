@@ -5,7 +5,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const fastify = Fastify({ logger: true });
-const PORT = 3333;
+const PORT = 4040;
 fastify.register(CharRoutes, { prefix: "/char" });
 fastify.register(UserRoutes, { prefix: "/users" });
 
