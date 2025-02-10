@@ -2,13 +2,24 @@ import UserModel from "../models/UserModel.js";
 
 const getUser = async (req, reply) => {
   try {
-    // const userId = await req.params.id;
-    // const foundedUser = await UserModel.findById({ _id: userId });
     const users = await UserModel.find();
     if (!users) {
-      reply.status(404).send({ data: "id de usuario nao encontrado" });
+      reply.status(404).send({ data: "nenhum usuario encontrado" });
     }
     return reply.send({ data: users });
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+const getUserById = async (req, reply) => {
+  try {
+    const userId = req.params.id;
+    const foundedUser = await UserModel.findById({ _id: userId });
+    if (!foundedUser) {
+      return reply.send({ data: `o usuario de id: ${userId} não existe` });
+    }
+    return reply.send({ data: foundedUser });
   } catch (error) {
     console.error(error);
   }
@@ -54,6 +65,7 @@ const deleteUser = async (req, reply) => {
 
 export default {
   getUser,
+  getUserById,
   createUser,
   updateUser,
   deleteUser,
