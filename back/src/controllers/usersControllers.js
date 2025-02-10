@@ -1,4 +1,20 @@
 import UserModel from "../models/UserModel.js";
+import bcrypt, { genSalt } from "bcrypt";
+
+const saltRounds = 13;
+
+const loginUser = async (req, reply) => {
+  try {
+    const { email, senha } = req.body;
+    let user = await UserModel.findOne({ email: email }).exec();
+    if (user === null) {
+      return reply.send({ data: "email ou senha inexistentes" });
+    }
+    return reply.send({ data: user });
+  } catch (error) {
+    console.error(error);
+  }
+};
 
 const getUser = async (req, reply) => {
   try {
@@ -28,7 +44,9 @@ const getUserById = async (req, reply) => {
 const createUser = async (req, reply) => {
   try {
     const { nome, email, senha } = await req.body;
-    const user = await UserModel.create({ nome, email, senha });
+    const genSalts = bcrypt.genSalt(saltRounds);
+    const encryptedPassword = bcrypt.hash(senha, genSalts);
+    const user = await UserModel.create({ nome, email, encryptedPassword });
     return reply.code(201).send({ data: user });
   } catch (error) {
     console.log(error);
@@ -64,6 +82,7 @@ const deleteUser = async (req, reply) => {
 };
 
 export default {
+  loginUser,
   getUser,
   getUserById,
   createUser,
